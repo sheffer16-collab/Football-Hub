@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Premier League</title>
+
+  <link rel="stylesheet" href="../css/דף בית.css">
+</head>
+
+<body>
+
+<header class="header">
+  <nav class="nav">
+    <h1 class="logo">TOP FOOTBALL CLUBS HUB</h1>
+
+    <ul class="menu">
+      <li><a class="a" href="../index.html">בית</a></li>
+      <li><a class="a" href="teams_premierlegue.html">Premier League</a></li>
+      <li><a class="a" href="teams_laliga.html">La Liga</a></li>
+      <li><a class="a" href="teams_seriaA.html">Serie A</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section class="container">
+
+    <div class="pl-header">
+      <h2>Premier League</h2>
+      <p>הליגה האנגלית הבכירה בעולם</p>
+    </div>
+   <!-- ===== YNWA: אודיו + אנימציה בתוך האתר ===== -->
+<section class="ynwa-section">
+
+  <h3>Liverpool Fans – You'll Never Walk Alone</h3>
+
+  <div id="ynwaText" class="ynwa-text">
+    YOU'LL NEVER WALK ALONE
+  </div>
+
+  <button type="button" id="toggleYnwa">Play</button>
+
+  <!-- אודיו חינמי שעובד בלי תיקייה -->
+  <audio id="ynwaAudio">
+    <source src="ynwa.mp4" type="audio/mpeg">
+  </audio>
+
+  <p id="ynwaMsg"></p>
+
+</section>
+
+<script>
+  let audio = document.getElementById("ynwaAudio");
+  let text  = document.getElementById("ynwaText");
+  let btn   = document.getElementById("toggleYnwa");
+  let msg   = document.getElementById("ynwaMsg");
+
+  btn.onclick = function() {
+    if (audio.paused) {
+      audio.play().catch(function() {
+        msg.innerHTML = "לא הצלחתי לנגן אודיו (בדוק אינטרנט/חסימה)";
+      });
+      text.classList.add("ynwa-running");
+      btn.innerHTML = "Pause";
+      msg.innerHTML = "מנגן...";
+    } else {
+      audio.pause();
+      text.classList.remove("ynwa-running");
+      btn.innerHTML = "Play";
+      msg.innerHTML = "הופסק";
+    }
+  };
+
+  audio.onended = function() {
+    text.classList.remove("ynwa-running");
+    btn.innerHTML = "Play";
+    msg.innerHTML = "נגמר";
+  };
+</script>
+
+
+    <div class="cards">
+
+      <article class="team-card pl-card">
+        <h3>Chelsea</h3>
+        <p>אנגליה</p>
+        <a href="https://www.chelseafc.com/en">פרטי קבוצה</a>
+      </article>
+
+      <article class="team-card pl-card">
+        <h3>Manchester United</h3>
+        <p>אנגליה</p>
+        <a href="https://www.manutd.com/">פרטי קבוצה</a>
+      </article>
+
+      <article class="team-card pl-card">
+        <h3>Liverpool</h3>
+        <p>אנגליה</p>
+        <a href="https://www.liverpoolfc.com/">פרטי קבוצה</a>
+      </article>
+
+      <article class="team-card pl-card">
+        <h3>Arsenal</h3>
+        <p>אנגליה</p>
+        <a href="https://www.arsenal.com/">פרטי קבוצה</a>
+      </article>
+
+      <article class="team-card pl-card">
+        <h3>Tottenham</h3>
+        <p>אנגליה</p>
+        <a href="https://www.tottenhamhotspur.com/">פרטי קבוצה</a>
+      </article>
+      <article class="team-card pl-card">
+        <h3>Manchester City</h3>
+        <p>אנגליה</p>
+        <a href="https://www.mancity.com/">פרטי קבוצה</a>
+      </article>
+
+    </div>
+
+    <div class="buttons">
+      <a href="../index.html" class="btn secondary">חזרה לדף הבית</a>
+    </div>
+
+  </section>
+</main>
+
+<footer class="footer">
+  © 2025 TOP FOOTBALL CLUBS HUB
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>בקשת רישום קבוצה חדשה</title>
+
+  
+  <link rel="stylesheet" href="../CSS/suggest_team.css">
+</head>
+
+<body>
+
+<form id="teamForm" action="save_suggest.php" method="post">
+
+  <div class="form-row">
+    <label class="dl">אימייל</label>
+    <input class="d_pakad" type="email" id="email" name="email" >
+  </div>
+
+  <div class="form-row">
+    <label class="dl">שם הקבוצה</label>
+    <input class="d_pakad" type="text" id="team_name" name="team_name" >
+  </div>
+
+  <div class="form-row">
+    <label class="dl">ליגה</label>
+    <select class="d_pakad" name="league" required>
+      <option value="">בחר ליגה</option>
+      <option value="Premier League">Premier League</option>
+      <option value="La Liga">La Liga</option>
+      <option value="Serie A">Serie A</option>
+      <option value="Other">אחרת</option>
+    </select>
+  </div>
+
+  <div class="form-row">
+    <label class="dl">אתר רשמי</label>
+    <!-- ולידציה רגילה 1 -->
+    <input class="d_pakad"
+           type="url"
+           name="official_url"
+           required
+           pattern="https://.*">
+  </div>
+
+  <div class="form-row">
+    <label class="dl">למה כדאי להוסיף את הקבוצה?</label>
+    <!-- ולידציה רגילה 2 -->
+    <textarea class="d_pakad"
+              name="reason"
+              rows="4"
+              required
+              minlength="10"></textarea>
+  </div>
+
+  <div class="form-row">
+    <button type="submit" id="sendBtn">שליחת בקשה</button>
+  </div>
+
+</form>
+
+<p id="msg"></p>
+
+
+<script src="../JS/suggest_team.js"></script>
+
+</body>
+</html>

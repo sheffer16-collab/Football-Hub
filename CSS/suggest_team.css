@@ -1,0 +1,7 @@
+.form-row{display: flex;margin-bottom: 1%;}
+.dl{width: 10%;}
+.d_pakad{width: 20%;
+}
+button{ background-color: aqua;}
+.error { color: red; font-weight: bold; }
+.success { color: green; font-weight: bold; }
