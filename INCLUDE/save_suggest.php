@@ -4,7 +4,7 @@
 $servername = "localhost";
 $username = "omersh6";      // שם משתמש של השרת שלך
 $password = "REShcujPYC";   // הסיסמה שלך
-$dbname = "omersh6";        // בדרך כלל אותו שם כמו המשתמש
+$dbname = "omersh6_football";        // בדרך כלל אותו שם כמו המשתמש
 
 // יצירת חיבור
 $conn = new mysqli($servername, $username, $password, $dbname);
